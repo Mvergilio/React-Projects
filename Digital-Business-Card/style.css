@@ -19,11 +19,18 @@ body {
 }
 .img--container {
   width: 100%;
-  background-color: aliceblue;
 }
 img {
   width: 100%;
   height: auto;
+  margin-bottom: 1rem;
+}
+
+.main--contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main--name {
@@ -32,6 +39,25 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+.main--name h5 {
+  color: #f3bf99;
+  margin-bottom: 0.7rem;
+}
 .main--name a {
+  text-decoration: none;
+}
+
+.contact--links--container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+}
+.contact--links--container a {
+  background-color: #f3bf99;
+  margin-right: auto;
+  padding: 10px 16px;
+  border-radius: 5px;
   text-decoration: none;
 }
