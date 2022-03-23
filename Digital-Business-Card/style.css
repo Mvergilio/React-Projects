@@ -52,11 +52,35 @@ img {
   width: auto;
   display: flex;
   justify-content: center;
-  background-color: yellow;
 }
 .contact--links--container a {
-  background-color: #f3bf99;
   padding: 10px 16px;
   border-radius: 5px;
   text-decoration: none;
+  margin: 1rem;
+  width: 9rem;
+  text-align: center;
+}
+.email {
+  background-color: #ffff;
+  color: #374151;
+}
+.linkedin {
+  background-color: #5093e2;
+}
+.contact--link--icon-email {
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  color: black;
+}
+
+.info {
+  padding: 1rem 1.5rem;
+}
+.info h3 {
+  margin-bottom: 0.5rem;
+}
+.info p {
+  color: #dcdcdc;
+  font-weight: 300;
 }

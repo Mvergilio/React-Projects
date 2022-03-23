@@ -5,12 +5,18 @@ export default class Links extends Component {
   render() {
     return (
       <div className="contact--links--container">
-        <a href="#">
-          <FontAwesomeIcon icon="fa-solid fa-envelope" />
+        <a className="email" href="#">
+          <FontAwesomeIcon
+            className="contact--link--icon-email"
+            icon="fa-solid fa-envelope"
+          />
           Email
         </a>
-        <a href="#">
-          <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+        <a className="linkedin" href="#">
+          <FontAwesomeIcon
+            className="contact--link--icon-linkedin"
+            icon="fa-brands fa-linkedin"
+          />
           Linkedin
         </a>
       </div>
