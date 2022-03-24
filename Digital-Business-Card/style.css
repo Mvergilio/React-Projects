@@ -69,9 +69,7 @@ img {
   background-color: #5093e2;
 }
 .contact--link--icon-email {
-  font-size: 1rem;
-  margin-right: 1.5rem;
-  color: black;
+  background-color: black;
 }
 
 .info {
@@ -83,4 +81,54 @@ img {
 .info p {
   color: #dcdcdc;
   font-weight: 300;
+}
+
+.main--footer--container {
+  background-color: #161619;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 3rem;
+}
+.main--footer--container a {
+  width: auto;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    border-radius: 15px;
+    margin: 2rem auto;
+    width: 60vw;
+  }
+  .img--container {
+    border-radius: 15px;
+  }
+  .img--container img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .main--footer--container {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .container {
+    width: 45vw;
+  }
+  .contact--links--container a {
+    width: 8rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    width: 30vw;
+  }
 }

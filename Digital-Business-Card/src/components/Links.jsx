@@ -7,8 +7,9 @@ export default class Links extends Component {
       <div className="contact--links--container">
         <a className="email" href="#">
           <FontAwesomeIcon
+            icon="fa-solid fa-square-envelope"
             className="contact--link--icon-email"
-            icon="fa-solid fa-envelope"
+            pull="left"
           />
           Email
         </a>
@@ -16,6 +17,8 @@ export default class Links extends Component {
           <FontAwesomeIcon
             className="contact--link--icon-linkedin"
             icon="fa-brands fa-linkedin"
+            pull="left"
+            inverse
           />
           Linkedin
         </a>
