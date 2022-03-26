@@ -4,9 +4,9 @@ import HeroImage from "./HeroSectionImage";
 
 export default function () {
   return (
-    <div className="main--hero--section--container">
+    <section className="main--hero--section--container">
       <HeroImage />
       <HeroContent />
-    </div>
+    </section>
   );
 }
