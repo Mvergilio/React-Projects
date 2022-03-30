@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
 }
+section {
+  padding: 20px;
+}
 
 .nav--container {
   box-shadow: 0px 6px 3px 3px rgba(0, 0, 0, 0.3);
@@ -61,4 +64,23 @@ body {
   font-size: 1.7rem;
   letter-spacing: 2px;
   margin-top: 1.5rem auto;
+}
+
+.card--section {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+
+.card--section img {
+  height: auto;
+}
+.card--rating--container {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.card--rating--container img {
+  width: 15px;
+  height: auto;
 }
