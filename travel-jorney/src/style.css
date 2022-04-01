@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Roboto:ital@0;1&display=swap");
 body {
-  background-color: aqua;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+.main--nav--container {
+  background-color: #f55a5a;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.main--nav--icon {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.main--section--container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.main--card--container {
+  position: relative;
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+}
+
+.main--card--container .main--card--image {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+}
+.main--article-descrition--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 50vw;
+  height: 350px;
+}
+.main--card--container h1 {
+  font-size: 3rem;
+}
+.main-article-location-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.main--icon--container {
+  display: flex;
+  align-items: center;
+}
+.main--icon--container img {
+  width: 0.9rem;
+  margin-right: 0.7rem;
+}
+
+.main-article-location-container h5 {
+  color: #f55a5a;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main-article-location-container a {
+  color: gray;
+}
+.main--article-content--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+.main--article-content--container p {
+  font-size: 1.3rem;
 }

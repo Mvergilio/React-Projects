@@ -1,9 +1,12 @@
 import React from "react";
+import MainContent from "./MainContent";
+import Nav from "./Nav";
 
 export default function App() {
   return (
     <main>
-      <h3>Working</h3>
+      <Nav />
+      <MainContent />
     </main>
   );
 }
