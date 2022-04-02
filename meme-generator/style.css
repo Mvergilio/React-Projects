@@ -1,0 +1,68 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: linear-gradient(45deg, #672280, #a626d3);
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: auto 10rem;
+}
+.header--title--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 100px;
+  margin-right: 2rem;
+}
+header h2 {
+  margin-right: 5rem;
+  font-size: 2rem;
+}
+
+.form {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+#first,
+#second {
+  height: 4rem;
+  width: 35rem;
+  border-radius: 10px;
+  margin: 1rem;
+  border: 2px solid #672280;
+  font-size: 2rem;
+  text-indent: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form--input--btn {
+  background: linear-gradient(45deg, #672280, #a626d3);
+  border-radius: 10px;
+  color: #fff;
+  padding: 2rem 26rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 300ms;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form--input--btn:hover {
+  color: #672280;
+  background: #fff;
+  border: 2px solid #672280;
+  transform: scale(1.05);
+}
