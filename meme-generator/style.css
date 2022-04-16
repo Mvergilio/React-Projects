@@ -39,8 +39,8 @@ header h2 {
   height: 200px;
 }
 
-#first,
-#second {
+#topText,
+#bottomText {
   height: 4rem;
   width: 35rem;
   border-radius: 10px;
