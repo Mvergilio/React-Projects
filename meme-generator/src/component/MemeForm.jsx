@@ -1,6 +1,5 @@
 import React from "react";
 import { MemeImg } from "./MemeImg";
-// "http://i.imgflip.com/1bij.jpg"
 export default function Meme() {
   const [memeData, setMemeData] = React.useState([]);
   const [meme, setMeme] = React.useState({
@@ -33,7 +32,7 @@ export default function Meme() {
   }
 
   return (
-    <div>
+    <div className="main--container">
       <form action="get" className="form">
         <div className="form--input-container">
           <input
