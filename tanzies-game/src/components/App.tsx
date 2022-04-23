@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/App.css";
 import { Die } from "./Die";
-
 function App() {
+  const [dicesData, setNumbersArr] = useState({});
+  function createRandomArray() {
+    const randomArray: number[] = [];
+
+    while (randomArray.length < 10) {
+      const randomNum: number = Math.floor(Math.random() * 6) + 1;
+      randomArray.push(randomNum);
+    }
+    //   setNumbersArr((prevState){
+    //     return randomArray.forEach((elem){
+    //       return {}
+    //     })
+    //   })
+  }
   return (
     <main className="main--container">
       <div className="main--description--container">
@@ -24,7 +37,11 @@ function App() {
         <Die />
         <Die />
       </div>
-      <button type="button" className="main--button">
+      <button
+        onClick={createRandomArray}
+        type="button"
+        className="main--button"
+      >
         Roll
       </button>
     </main>
