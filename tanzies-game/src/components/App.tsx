@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 import { Die } from "./Die";
-function App() {
-  const [dicesData, setNumbersArr] = useState({});
-  function createRandomArray() {
-    const randomArray: number[] = [];
 
-    while (randomArray.length < 10) {
-      const randomNum: number = Math.floor(Math.random() * 6) + 1;
-      randomArray.push(randomNum);
-    }
-    //   setNumbersArr((prevState){
-    //     return randomArray.forEach((elem){
-    //       return {}
-    //     })
-    //   })
-  }
+function App() {
+  const [numbersArr, setNumbersArr] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+
+  // function createRandomArray() {
+  //   const randomArray: number[] = [];
+
+  //   while (randomArray.length < 10) {
+  //     const randomNum: number = Math.floor(Math.random() * 6) + 1;
+  //     randomArray.push(randomNum);
+  //   }
+  // }
+  const dieArr = numbersArr.map((number, index) => {
+    return <Die key={index} number={number} />;
+  });
   return (
     <main className="main--container">
       <div className="main--description--container">
@@ -25,18 +25,7 @@ function App() {
           current value between rolls.
         </p>
       </div>
-      <div className="main--die--container">
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-        <Die />
-      </div>
+      <div className="main--die--container">{dieArr}</div>
       <button
         onClick={createRandomArray}
         type="button"
