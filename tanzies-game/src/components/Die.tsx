@@ -1,8 +1,11 @@
 import React from "react";
 import "../styles/Die.css";
 
-function Die() {
-  return <div className="die">2</div>;
+interface props {
+  number: number;
+}
+function Die({ number }: props) {
+  return <div className="die">{number}</div>;
 }
 
 export { Die };

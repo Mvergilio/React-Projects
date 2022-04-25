@@ -5,17 +5,18 @@ import { Die } from "./Die";
 function App() {
   const [numbersArr, setNumbersArr] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
 
-  // function createRandomArray() {
-  //   const randomArray: number[] = [];
+  function createRandomArray() {
+    const randomArray: number[] = [];
 
-  //   while (randomArray.length < 10) {
-  //     const randomNum: number = Math.floor(Math.random() * 6) + 1;
-  //     randomArray.push(randomNum);
-  //   }
-  // }
-  const dieArr = numbersArr.map((number, index) => {
-    return <Die key={index} number={number} />;
-  });
+    while (randomArray.length < 10) {
+      const randomNum: number = Math.floor(Math.random() * 6) + 1;
+      randomArray.push(randomNum);
+    }
+    setNumbersArr(randomArray);
+  }
+  const dieArr = numbersArr.map((number, index) => (
+    <Die key={index} number={number} />
+  ));
   return (
     <main className="main--container">
       <div className="main--description--container">
