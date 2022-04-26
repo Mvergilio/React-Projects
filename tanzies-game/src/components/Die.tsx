@@ -1,10 +1,14 @@
 import React from "react";
 import "../styles/Die.css";
 
-interface props {
-  number: number;
+interface Props {
+  numberObj: { number: number; freeze: boolean };
 }
-function Die({ number }: props) {
+
+function Die(props: Props) {
+  const {
+    numberObj: { number, freeze },
+  } = props;
   return <div className="die">{number}</div>;
 }
 

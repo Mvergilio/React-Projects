@@ -3,7 +3,18 @@ import "../styles/App.css";
 import { Die } from "./Die";
 
 function App() {
-  const [numbersArr, setNumbersArr] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+  const [numbersArr, setNumbersArr] = useState([
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+    { number: 1, freeze: false },
+  ]);
 
   function createRandomArray() {
     const randomArray: number[] = [];
@@ -12,11 +23,20 @@ function App() {
       const randomNum: number = Math.floor(Math.random() * 6) + 1;
       randomArray.push(randomNum);
     }
-    setNumbersArr(randomArray);
+    setNumbersArr((prevState) => {
+      const newState = randomArray.map((num: number, index: number) => ({
+        ...prevState[index],
+        number: num,
+      }));
+
+      return newState;
+    });
   }
-  const dieArr = numbersArr.map((number, index) => (
-    <Die key={index} number={number} />
-  ));
+  const dieArr = numbersArr.map(
+    (obj: { number: number; freeze: boolean }, index: number) => (
+      <Die key={index} numberObj={obj} />
+    )
+  );
   return (
     <main className="main--container">
       <div className="main--description--container">
