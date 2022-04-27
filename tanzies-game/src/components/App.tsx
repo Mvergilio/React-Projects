@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import "../styles/App.css";
 import { Die } from "./Die";
 
+interface NumberArr {
+  number: number;
+  freeze: boolean;
+}
+
 function App() {
-  const [numbersArr, setNumbersArr] = useState([
+  const [numbersArr, setNumbersArr] = useState<NumberArr[]>([
     { number: 1, freeze: false },
     { number: 1, freeze: false },
     { number: 1, freeze: false },
@@ -26,15 +31,31 @@ function App() {
     setNumbersArr((prevState) => {
       const newState = randomArray.map((num: number, index: number) => ({
         ...prevState[index],
-        number: num,
+        number: prevState[index].freeze ? prevState[index].number : num,
       }));
 
       return newState;
     });
   }
+
+  function changeBooleanValue(id: number) {
+    setNumbersArr((prevState) => {
+      const newStateWithNewBoolean: NumberArr[] = prevState.map(
+        (elem: NumberArr, index: number) =>
+          id === index ? { ...elem, freeze: !elem.freeze } : { ...elem }
+      );
+      return newStateWithNewBoolean;
+    });
+  }
+
   const dieArr = numbersArr.map(
     (obj: { number: number; freeze: boolean }, index: number) => (
-      <Die key={index} numberObj={obj} />
+      <Die
+        key={index}
+        index={index}
+        changeBooleanValue={changeBooleanValue}
+        numberObj={obj}
+      />
     )
   );
   return (
