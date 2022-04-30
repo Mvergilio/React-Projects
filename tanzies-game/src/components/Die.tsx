@@ -3,8 +3,8 @@ import "../styles/Die.css";
 
 interface Props {
   index: number;
-  changeBooleanValue: void;
-  numberObj: { number: number; freeze: boolean };
+  changeBooleanValue: () => void;
+  numberObj: { value: number; freeze: boolean };
 }
 interface Style {
   backgroundColor: string;
@@ -14,7 +14,7 @@ function Die(props: Props) {
   const {
     index,
     changeBooleanValue,
-    numberObj: { number, freeze },
+    numberObj: { value, freeze },
   } = props;
 
   const styles: Style = {
@@ -26,7 +26,7 @@ function Die(props: Props) {
       onClick={() => changeBooleanValue(index)}
       className="die"
     >
-      {number}
+      {value}
     </div>
   );
 }
