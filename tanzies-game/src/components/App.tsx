@@ -43,6 +43,7 @@ function App() {
   const [numbersArr, setNumbersArr] = useState<NumberArr[]>(
     createRandomArray()
   );
+
   const [tenzies, setTenzies] = useState(false);
 
   function handleChangeNumber() {
@@ -82,6 +83,7 @@ function App() {
       <Die
         key={nanoid()}
         index={index}
+        // eslint-disable-next-line react/jsx-no-bind
         changeBooleanValue={changeBooleanValue}
         numberObj={obj}
       />

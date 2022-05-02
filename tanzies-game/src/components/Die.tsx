@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import "../styles/Die.css";
 
 interface Props {
   index: number;
-  changeBooleanValue: () => void;
+  // eslint-disable-next-line no-unused-vars
+  changeBooleanValue: (index: number) => void;
   numberObj: { value: number; freeze: boolean };
 }
 interface Style {
@@ -21,6 +23,8 @@ function Die(props: Props) {
     backgroundColor: freeze ? "green" : "white",
   };
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       style={styles}
       onClick={() => changeBooleanValue(index)}
